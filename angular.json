@@ -79,14 +79,11 @@
             ],
             "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "4d6b1a6f-978c-4561-83cf-2648b07ab641"
   }
 }
