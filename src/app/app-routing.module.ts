@@ -8,7 +8,8 @@ import { UserListComponent } from './components/works/user-list/user-list.compon
 import { TaskListComponent } from './components/works/task-list/task-list.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
     path: 'works',
     component: WorksComponent,
