@@ -8,8 +8,16 @@ import { UserListComponent } from './components/works/user-list/user-list.compon
 import { TaskListComponent } from './components/works/task-list/task-list.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'works/:project', component: WorksComponent },
+  { path: '', component: HomeComponent },
+  {
+    path: 'works',
+    component: WorksComponent,
+    children: [
+      { path: 'cenzor', component: CenzorComponent },
+      { path: 'userlist', component: UserListComponent },
+      { path: 'tasklist', component: TaskListComponent },
+    ],
+  },
 ];
 
 @NgModule({
