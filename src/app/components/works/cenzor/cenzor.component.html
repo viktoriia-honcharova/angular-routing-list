@@ -1,1 +1,41 @@
-<p>cenzor works!</p>
+<div class="wrapper container">
+  <h4 class="words">
+    Bad words: <span id="bad-words">{{ badWords }}</span>
+  </h4>
+
+  <div class="row mb-4">
+    <div class="col-8">
+      <input
+        [class]="inputClass"
+        type="text"
+        [placeholder]="inputPlaceholder"
+        [(ngModel)]="badword"
+      />
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-warning w-100" (click)="addWord()">
+        Add
+      </button>
+    </div>
+    <div class="col-2">
+      <button type="button" class="btn btn-danger w-100" (click)="resetWord()">
+        Reset
+      </button>
+    </div>
+  </div>
+  <textarea
+    [class]="areaClass"
+    id="text-area"
+    rows="5"
+    [placeholder]="areaPlaceholder"
+    [(ngModel)]="areaValue"
+  ></textarea>
+  <button
+    type="button"
+    class="btn btn-success w-100"
+    id="cenzor"
+    (click)="cenzor()"
+  >
+    Cenzor
+  </button>
+</div>
