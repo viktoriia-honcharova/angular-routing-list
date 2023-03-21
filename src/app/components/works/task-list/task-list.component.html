@@ -1,1 +1,9 @@
-<p>task-list works!</p>
+<div class="container">
+  <p>
+    <label for="new-task">Add Item</label
+    ><input id="new-task" type="text" [(ngModel)]="task" />
+    <button (click)="addTask()">Add</button>
+  </p>
+
+  <app-tasktable [tasks]="tasks"></app-tasktable>
+</div>
